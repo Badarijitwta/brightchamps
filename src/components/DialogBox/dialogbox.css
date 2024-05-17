@@ -1,0 +1,10 @@
+.dialog-text-container {
+  position: absolute;
+  top: 16%;
+  left: 60%;
+  width: 100%;
+  /* background-color: blue; */
+  max-width: 400px;
+
+  transform: translate(-50%, -50%);
+}
