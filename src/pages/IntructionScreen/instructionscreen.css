@@ -1,0 +1,21 @@
+.mid-item {
+  height: auto;
+  margin-top: -2rem;
+  display: flex;
+  justify-content: center;
+  /* border: 2px solid red; */
+
+
+  .mid-item-cont {
+    width: 68%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    background-image: url("../../assets/line.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+
+}

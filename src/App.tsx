@@ -2,7 +2,7 @@ import "./App.css";
 import styled from "styled-components";
 import background from "./assets/background1.png";
 import Homepage from "./pages/HomePage/Homepage";
-// import InstructionScreen from "./pages/IntructionScrren/index";
+// import GameArena from "./pages/GameArena";
 const BackgroundImage = styled.img`
   position: fixed;
   top: 0;
@@ -17,7 +17,7 @@ function App() {
     <>
       <BackgroundImage src={background} />
       <Homepage />
-      {/* <InstructionScreen /> */}
+      {/* <GameArena /> */}
     </>
   );
 }

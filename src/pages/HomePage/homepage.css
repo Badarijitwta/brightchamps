@@ -12,16 +12,39 @@
 
   .homepage-top {
     display: flex;
-    justify-content: flex-end;
-    padding-right: 20%;
+    /* padding-right: 20%; */
+    /* border: 2px solid red; */
+    flex-direction: column;
 
-    .back-btn-cont {
-      /* border: 2px solid red; */
-      top: 10%;
-      left: 7%;
+
+
+    .dialog-box-cont {
       display: flex;
-      align-items: center;
-      position: absolute;
+      /* border: 2px solid yellow; */
+      justify-content: flex-end;
+      padding-right: 10rem;
+
+
+
+      .back-btn-cont {
+        /* border: 2px solid red; */
+        top: 10%;
+        left: 7%;
+        display: flex;
+        align-items: center;
+        position: absolute;
+
+      }
+    }
+
+
+    .progress-bar-cont {
+      /* margin-right: -100%; */
+      padding-top: 0.8rem;
+      width: 100%;
+      height: 50px;
+      /* border: 2px solid red; */
+
     }
 
   }
@@ -30,7 +53,7 @@
     display: grid;
     justify-content: center;
     /* border: 2px solid red; */
-    margin-top: -3rem;
+    margin-top: -7rem;
 
     .homepage-bottom {
       grid-area: 1/1;

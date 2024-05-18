@@ -8,6 +8,7 @@ import DialogBox from "./../../components/DialogBox/index";
 import { LeftButtons } from "./../../components/LeftButtons/index";
 import { useState } from "react";
 import BackButton from "../../components/BackButton";
+import ProgressBar from "../../components/ProgressBar";
 
 const MonkeImage = styled.img`
   max-width: 350px;
@@ -49,20 +50,33 @@ export default function Homepage() {
   return (
     <div className="homepage-container">
       <div className="homepage-top">
-        {currentPage > 1 ? (
-          <div className="back-btn-cont">
+        <div
+          className="progress-bar-cont"
+          style={{ visibility: currentPage < 2 ? "hidden" : "visible" }}
+        >
+          <ProgressBar />
+        </div>
+
+        <div className="dialog-box-cont">
+          <div
+            className="back-btn-cont"
+            style={{ visibility: currentPage === 1 ? "hidden" : "visible" }}
+          >
             <BackButton handleBack={handleBackClick} />
           </div>
-        ) : (
-          ""
-        )}
-        <DialogBox dialogText={currentPageObj?.dialogText} />
+
+          <DialogBox dialogText={currentPageObj?.dialogText} />
+        </div>
       </div>
       <div className="homepage-mid">
         <MonkeImage src={monke} />
         <div className="homepage-bottom">
           <div className="homepage-bottom-inside">
-            <LeftButtons />
+            <div
+              style={{ visibility: currentPage === 3 ? "hidden" : "visible" }}
+            >
+              <LeftButtons />
+            </div>
             <Button
               text={currentPageObj?.buttonText}
               handleClick={handleClick}
