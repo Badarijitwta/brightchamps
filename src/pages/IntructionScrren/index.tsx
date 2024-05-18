@@ -1,16 +1,16 @@
 // import styled from "styled-components";
 import "./instructionscreen.css";
-import Button from "./../../components/Button/index";
+// import Button from "./../../components/Button/index";
 import ProgressBar from "./../../components/ProgressBar/index";
 import CardStack from "./../../components/CardStack/index";
-import BackButton from "../../components/BackButton";
+// import BackButton from "../../components/BackButton";
 
 const InstructionScreen: React.FC = () => {
   return (
     <>
       <div className="instruct-screen-container">
         <div className="top-item">
-          <BackButton />
+          {/* <BackButton /> */}
           <div className="prb-container">
             <ProgressBar />
           </div>
@@ -40,9 +40,7 @@ const InstructionScreen: React.FC = () => {
             />
           </div>
         </div>
-        <div className="bottom-item">
-          <Button text={"PLAY"} />
-        </div>
+        <div className="bottom-item">{/* <Button text={"PLAY"} /> */}</div>
       </div>
     </>
   );
