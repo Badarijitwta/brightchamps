@@ -3,9 +3,9 @@ import banana from "../../assets/banana.png";
 import styled from "styled-components";
 
 const BananaImage = styled.img`
-  height: 50px;
+  height: 60px;
   margin-top: -1rem;
-  margin-left: -2rem;
+  margin-left: -2.5rem;
   transform: rotate(-30deg);
   filter: grayscale(100%);
 `;

@@ -3,12 +3,14 @@
 
   display: flex;
   justify-content: center;
+
 }
 
 .progress {
   width: 60%;
-
+  height: 1.5rem;
 }
+
 
 .bg-gray {
   background-color: gray;
