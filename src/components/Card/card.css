@@ -1,0 +1,23 @@
+.card-main-container {
+  width: 100px;
+  height: 150px;
+  box-shadow: -7px -5px 17.8px 0px rgba(235, 235, 235, 1);
+
+  box-shadow: 3px 4px 9.4px 0px rgba(235, 235, 235, 0.31);
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding: 0.3rem;
+
+
+  .card-main {
+    width: 100%;
+    border-radius: 15px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #FBA8C1 0%, rgba(251, 168, 193, 0.54) 46%, rgba(251, 168, 193, 0.97) 100%);
+
+  }
+}

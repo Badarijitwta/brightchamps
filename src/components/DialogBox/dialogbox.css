@@ -1,10 +1,20 @@
-.dialog-text-container {
-  position: absolute;
-  top: 16%;
-  left: 60%;
-  width: 100%;
-  /* background-color: blue; */
+.dialog-box {
+  display: grid;
+  grid-template-columns: 1fr;
   max-width: 400px;
+  /* border: 2px solid black; */
+  /* position: fixed; */
+}
 
-  transform: translate(-50%, -50%);
+
+
+.dialog-text-container {
+  /* border: 2px solid violet; */
+  padding-top: 1rem;
+  /* background-color: aqua; */
+  grid-area: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1rem
 }

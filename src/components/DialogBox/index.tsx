@@ -2,12 +2,7 @@ import "./dialogbox.css";
 import styled from "styled-components";
 import dialog from "../../assets/dialog.png";
 const DialogImage = styled.img`
-  position: absolute;
-  top: 20%;
-  left: 60%;
-  max-width: 300px;
-  height: auto;
-  transform: translate(-50%, -50%);
+  grid-area: 1/1;
 `;
 
 const Text = styled.h4`
@@ -17,12 +12,18 @@ const Text = styled.h4`
   font-weight: 800;
   text-align: center;
 `;
-const DialogBox: React.FC = () => {
+
+interface DialogBoxProps {
+  dialogText: string;
+}
+const DialogBox: React.FC<DialogBoxProps> = ({ dialogText }) => {
   return (
     <>
-      <DialogImage src={dialog} />
-      <div className="dialog-text-container">
-        <Text>Welcome Kiddo !</Text>
+      <div className="dialog-box">
+        <DialogImage src={dialog} />
+        <div className="dialog-text-container">
+          <Text>{dialogText}</Text>
+        </div>
       </div>
     </>
   );

@@ -1,5 +1,4 @@
 .button-container {
-  position: absolute;
   width: 300px;
   max-width: 40vw;
   padding: 1rem;
@@ -14,7 +13,6 @@
   border: 2.01px 0px 0px 0px;
   opacity: 0px;
   /* border: 2px solid red; */
-  animation: Smart animate;
   animation-timing-function: ease-out;
   animation-duration: 300ms;
 

@@ -1,10 +1,23 @@
 import "./App.css";
-import Homepage from "./pages/Homepage";
-
+import styled from "styled-components";
+import background from "./assets/background1.png";
+import Homepage from "./pages/HomePage/Homepage";
+// import InstructionScreen from "./pages/IntructionScrren/index";
+const BackgroundImage = styled.img`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+`;
 function App() {
   return (
     <>
+      <BackgroundImage src={background} />
       <Homepage />
+      {/* <InstructionScreen /> */}
     </>
   );
 }
