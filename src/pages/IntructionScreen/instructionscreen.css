@@ -10,7 +10,7 @@
     width: 68%;
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 3rem;
     background-image: url("../../assets/line.png");
     background-repeat: no-repeat;
     background-size: cover;

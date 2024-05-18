@@ -14,6 +14,8 @@ const InstructionScreen: React.FC = () => {
               backgroundColor: "#ffbc0b",
               boxShadow: "0px 5.52px 0px 0px #d29901",
             }}
+            cardText={"Select a pink card"}
+            cardBottomText="It has images."
           />
           <CardStack
             number={"02"}
@@ -21,6 +23,8 @@ const InstructionScreen: React.FC = () => {
               backgroundColor: "rgba(166, 205, 37, 1)",
               boxShadow: "0px 5.52px 0px 0px rgba(139, 173, 29, 1) ",
             }}
+            cardText={"Select a blue card"}
+            cardBottomText="It has alphabets."
           />
           <CardStack
             number={"03"}
@@ -28,6 +32,8 @@ const InstructionScreen: React.FC = () => {
               backgroundColor: "rgba(251, 153, 61, 1)",
               boxShadow: "0px 5.52px 0px 0px rgba(197, 98, 4, 1)",
             }}
+            cardText={"Its a match !"}
+            cardBottomText="otherwise retry :("
           />
         </div>
       </div>

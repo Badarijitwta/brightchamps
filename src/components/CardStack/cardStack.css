@@ -1,8 +1,9 @@
 .card-stack-container {
-  width: 280px;
+  width: 360px;
   height: 300px;
   /* border: 2px solid black; */
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -11,7 +12,7 @@
   width: 100%;
   max-width: 250px;
   height: 100%;
-  border-radius: 67px;
+  border-radius: 57px;
   display: flex;
   justify-content: center;
   gap: 0.4rem;
@@ -19,6 +20,7 @@
   align-items: center;
   justify-content: space-evenly;
   box-shadow: 0 4px 8px rgba(0, 0, 23, 0.1);
+  /* border: 1px solid red; */
 
   .card-holder {
     /* position: relative; */
@@ -50,6 +52,20 @@
       /* border: 2px solid green; */
       gap: 0.5rem;
       margin-left: 3.4rem;
+      font-family: Nunito;
+
+      .card-text-cont {
+        color: rgba(17, 174, 198, 1);
+        font-weight: 800;
+        font-size: 25px;
+      }
+
+      .card-text-bottom {
+        color: rgba(166, 201, 48, 1);
+        font-weight: 800;
+        font-size: 17px;
+
+      }
     }
   }
 }
