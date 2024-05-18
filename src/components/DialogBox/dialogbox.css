@@ -1,7 +1,7 @@
 .dialog-box {
   display: grid;
   grid-template-columns: 1fr;
-  max-width: 400px;
+  min-width: 400px;
   /* border: 2px solid black; */
   /* position: fixed; */
 }

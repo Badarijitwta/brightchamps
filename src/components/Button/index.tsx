@@ -1,12 +1,14 @@
 import "./button.css";
+// import { useNavigate } from "react-router-dom";s
 
 interface ButtonProps {
-  text: string;
+  handleClick: () => void;
+  text?: string;
 }
-const Button: React.FC<ButtonProps> = ({ text }) => {
+const Button: React.FC<ButtonProps> = ({ text, handleClick }) => {
   return (
     <div className="button-container">
-      <button className="button-main">
+      <button className="button-main" onClick={handleClick}>
         <div className="button-inside">
           <div className="button-inside-top">
             <div className="ellipse"></div>
