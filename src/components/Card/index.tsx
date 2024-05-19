@@ -1,9 +1,16 @@
 import "./card.css";
-const Card: React.FC = () => {
+
+interface CardProps {
+  background: string;
+  imageUrl: string;
+}
+const Card: React.FC<CardProps> = ({ background, imageUrl }) => {
   return (
     <div className="card-main-container">
-      <div className="card-main">
-        <div className="card-icon"></div>
+      <div className="card-main" style={{ background }}>
+        <div className="card-icon">
+          <img src={imageUrl} alt="" />
+        </div>
       </div>
     </div>
   );

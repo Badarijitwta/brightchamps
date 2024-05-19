@@ -3,6 +3,10 @@ import "./cardStack.css";
 import CSButton from "./../CSButton/index";
 import cardshadow from "../../assets/cardShadow.png";
 import styled from "styled-components";
+import Apple from "../../assets/apple.png";
+import PinkHeart from "../../assets/pink_heart.png";
+import BlueHeart from "../../assets/blue_heart.png";
+import StyledCards from "../../assets/Group 157.png";
 
 interface CardStackProp {
   number: string;
@@ -16,11 +20,11 @@ interface CardStackProp {
 
 const CardShadow = styled.img`
   transform: rotate(0deg);
-  position: fixed;
   width: 230px;
+  margin-top: 10px;
   z-index: -1;
-  bottom: 10%;
 `;
+
 const CardStack: React.FC<CardStackProp> = ({
   number,
   bgStyle,
@@ -32,12 +36,59 @@ const CardStack: React.FC<CardStackProp> = ({
       <div className="card-stack-main">
         <div className="card-img-cont">
           <div className="card-holder">
-            <div className="card-one">
-              <Card />
-            </div>
-            <div className="card-two">
-              <Card />
-            </div>
+            {number === "01" && (
+              <>
+                <div className="card-one">
+                  <Card
+                    background={
+                      "linear-gradient(180deg, #FBA8C1 0%, rgba(251, 168, 193, 0.54) 46%, rgba(251, 168, 193, 0.97) 100%)"
+                    }
+                    imageUrl={PinkHeart}
+                  />
+                  ;
+                </div>
+                <div className="card-two">
+                  <Card
+                    background={"rgba(255, 137, 111, 1)"}
+                    imageUrl={Apple}
+                  />
+                </div>
+              </>
+            )}
+
+            {number === "02" && (
+              <>
+                <div className="card-holder">
+                  <Card
+                    background={
+                      "linear-gradient(180deg, #A2E3F3 0%, rgba(162, 227, 243, 0.29) 46%, #A2E3F3 100%)"
+                    }
+                    imageUrl={BlueHeart}
+                  />
+                </div>
+              </>
+            )}
+
+            {number === "03" && (
+              <>
+                <div
+                  className="card-holder"
+                  style={{
+                    width: "100%",
+                    marginBottom: "-6rem",
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                >
+                  <img
+                    src={StyledCards}
+                    width={"240px"}
+                    height={"240px"}
+                    alt=""
+                  />
+                </div>
+              </>
+            )}
           </div>
         </div>
         <div className="card-bottom-main">

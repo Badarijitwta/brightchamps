@@ -1,13 +1,11 @@
 import "./gameArena.css";
-const GameArena: React.FC = () => {
+
+const Game: React.FC = () => {
   return (
-    <div className="arena-container">
-      HJekk
-      <div className="arena-top"></div>
-      <div className="arena-main"></div>
-      <div className="arena-bottom"></div>
-    </div>
+    <>
+      <h3>This is Game</h3>
+    </>
   );
 };
 
-export default GameArena;
+export default Game;

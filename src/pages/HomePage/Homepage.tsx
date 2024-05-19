@@ -10,6 +10,7 @@ import { useState } from "react";
 import BackButton from "../../components/BackButton";
 import ProgressBar from "../../components/ProgressBar";
 import InstructionScreen from "../IntructionScreen";
+import Game from "../GameArena";
 
 const MonkeImage = styled.img`
   max-width: 350px;
@@ -36,7 +37,9 @@ const pages = [
 
 export default function Homepage() {
   const [currentPage, setCurrentPage] = useState(1);
-  const [showIntructions, setShowInstructions] = useState(false);
+  const [showInstructions, setShowInstructions] = useState(false);
+  const [showGame, setShowGame] = useState(false);
+  // const [previousPage, setPreviousPage] = useState(1);
   const currentPageObj = pages.find((page) => {
     return page.pageId === currentPage;
   });
@@ -45,15 +48,29 @@ export default function Homepage() {
   const handleClick = () => {
     if (currentPage === pages.length) {
       setShowInstructions(true);
+      // setPreviousPage(currentPage);
     } else {
       setCurrentPage(currentPage === pages.length ? 1 : currentPage + 1);
     }
   };
 
-  const handleBackClick = () => {
-    setShowInstructions(false);
-    setCurrentPage((prev) => prev - 1);
+  const handlePlayClick = () => {
+    setShowGame(true);
+    console.log("PLAY");
   };
+
+  const handleBackClick = () => {
+    if (showGame) {
+      setShowGame(false);
+      setShowInstructions(true);
+    } else if (showInstructions) {
+      setShowInstructions(false);
+      // setCurrentPage(previousPage);
+    } else if (currentPage > 1) {
+      setCurrentPage((prev) => prev - 1);
+    }
+  };
+
   return (
     <div className="homepage-container">
       <div className="homepage-top">
@@ -74,7 +91,7 @@ export default function Homepage() {
 
           <div
             style={{
-              visibility: !showIntructions ? "visible" : "hidden",
+              visibility: !showInstructions ? "visible" : "hidden",
             }}
           >
             <DialogBox dialogText={currentPageObj?.dialogText} />
@@ -82,7 +99,13 @@ export default function Homepage() {
         </div>
       </div>
       <div className="homepage-mid">
-        {!showIntructions ? <MonkeImage src={monke} /> : <InstructionScreen />}
+        {!showInstructions && !showGame ? (
+          <MonkeImage src={monke} />
+        ) : showGame ? (
+          <Game />
+        ) : (
+          <InstructionScreen />
+        )}
         <div className="homepage-bottom">
           <div className="homepage-bottom-inside">
             <div
@@ -91,8 +114,8 @@ export default function Homepage() {
               <LeftButtons />
             </div>
             <Button
-              text={showIntructions ? "PLAY" : currentPageObj?.buttonText}
-              handleClick={handleClick}
+              text={showInstructions ? "PLAY" : currentPageObj?.buttonText}
+              handleClick={showInstructions ? handlePlayClick : handleClick}
             />
           </div>
         </div>
