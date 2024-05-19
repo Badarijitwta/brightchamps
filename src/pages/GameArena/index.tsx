@@ -37,7 +37,7 @@ const Game: React.FC = () => {
           <Text>Select a Card</Text>
         </div>
         <div className="game-arena-main">
-          <div className="fruit-letter-cards">
+          <div className="fruit-pink-cards">
             <div className="row1">
               {cardsArray.map((num) => (
                 <Card
@@ -62,7 +62,7 @@ const Game: React.FC = () => {
             </div>
           </div>
 
-          <div className="fruit-letter-cards">
+          <div className="letter-blue-cards">
             <div className="row1">
               {cardsArray.map((num) => (
                 <Card

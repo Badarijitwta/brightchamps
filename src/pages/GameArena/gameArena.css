@@ -27,7 +27,8 @@
 
   }
 
-  .fruit-letter-cards {
+  .fruit-pink-cards,
+  .letter-blue-cards {
     /* border: 2px solid pink; */
     width: 50%;
     display: flex;

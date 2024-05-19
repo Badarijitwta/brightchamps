@@ -6,6 +6,7 @@ interface CardProps {
   frontimageUrl: string;
   backimageUrl?: string;
   isStatic?: boolean;
+  status?: string;
 }
 const Card: React.FC<CardProps> = ({
   background,
@@ -13,26 +14,27 @@ const Card: React.FC<CardProps> = ({
   backimageUrl,
   isStatic,
 }) => {
-  const [isFlipped, setIsFlipped] = useState(false);
+  const [flipped, setFlipped] = useState(false);
 
   const handleCardClick = () => {
     if (!isStatic) {
-      setIsFlipped(!isFlipped);
+      setFlipped((prev) => !prev);
     }
   };
   return (
     <div className="card-main-container" onClick={handleCardClick}>
       <div
-        className={`card-main ${
-          isFlipped ? "animate__animated animate__flipInY" : ""
-        }`}
-        style={{ background }}
+        className="card-main"
+        style={{ background: flipped ? background : "" }}
       >
         <div className="card-icon">
-          <div className="card-front">
-            <img src={frontimageUrl} alt="" />
-          </div>
-          {backimageUrl && (
+          {flipped ? (
+            <>
+              <div className="card-front">
+                <img src={frontimageUrl} alt="" />
+              </div>
+            </>
+          ) : (
             <div className="card-back">
               <img src={backimageUrl} alt="" />
             </div>

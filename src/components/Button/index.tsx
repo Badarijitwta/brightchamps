@@ -16,7 +16,6 @@ const Button: React.FC<ButtonProps> = ({ text, handleClick }) => {
           <div className="button-text">{text}</div>
         </div>
       </button>
-      <div className="polygon"></div>
     </div>
   );
 };

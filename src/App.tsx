@@ -1,6 +1,7 @@
 import "./App.css";
 import styled from "styled-components";
 import background from "./assets/background1.png";
+// import Success from "./pages/Success";
 import Homepage from "./pages/HomePage/Homepage";
 // import GameArena from "./pages/GameArena";
 const BackgroundImage = styled.img`
@@ -18,6 +19,7 @@ function App() {
       <BackgroundImage src={background} />
       <Homepage />
       {/* <GameArena /> */}
+      {/* <Success /> */}
     </>
   );
 }
