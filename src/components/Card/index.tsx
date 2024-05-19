@@ -7,21 +7,18 @@ interface CardProps {
   backimageUrl?: string;
   isStatic?: boolean;
   status?: string;
-  setDialog: (prev: any) => boolean;
 }
 const Card: React.FC<CardProps> = ({
   background,
   frontimageUrl,
   backimageUrl,
   isStatic,
-  setDialog,
 }) => {
   const [flipped, setFlipped] = useState(false);
 
   const handleCardClick = () => {
     if (!isStatic) {
       setFlipped((prev) => !prev);
-      // setDialog((prev) => !prev);
     }
   };
   return (
