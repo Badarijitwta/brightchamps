@@ -43,14 +43,16 @@ const CardStack: React.FC<CardStackProp> = ({
                     background={
                       "linear-gradient(180deg, #FBA8C1 0%, rgba(251, 168, 193, 0.54) 46%, rgba(251, 168, 193, 0.97) 100%)"
                     }
-                    imageUrl={PinkHeart}
+                    frontimageUrl={PinkHeart}
+                    isStatic={true}
                   />
                   ;
                 </div>
                 <div className="card-two">
                   <Card
                     background={"rgba(255, 137, 111, 1)"}
-                    imageUrl={Apple}
+                    frontimageUrl={Apple}
+                    isStatic={true}
                   />
                 </div>
               </>
@@ -63,7 +65,8 @@ const CardStack: React.FC<CardStackProp> = ({
                     background={
                       "linear-gradient(180deg, #A2E3F3 0%, rgba(162, 227, 243, 0.29) 46%, #A2E3F3 100%)"
                     }
-                    imageUrl={BlueHeart}
+                    frontimageUrl={BlueHeart}
+                    isStatic={true}
                   />
                 </div>
               </>

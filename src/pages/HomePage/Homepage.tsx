@@ -113,10 +113,12 @@ export default function Homepage() {
             >
               <LeftButtons />
             </div>
-            <Button
-              text={showInstructions ? "PLAY" : currentPageObj?.buttonText}
-              handleClick={showInstructions ? handlePlayClick : handleClick}
-            />
+            <div style={{ visibility: showGame ? "hidden" : "visible" }}>
+              <Button
+                text={showInstructions ? "PLAY" : currentPageObj?.buttonText}
+                handleClick={showInstructions ? handlePlayClick : handleClick}
+              />
+            </div>
           </div>
         </div>
       </div>

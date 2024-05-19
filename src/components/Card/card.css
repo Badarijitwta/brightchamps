@@ -1,29 +1,37 @@
 .card-main-container {
   width: 100px;
   height: 150px;
-  box-shadow: -7px -5px 17.8px 0px rgba(235, 235, 235, 1);
-  box-shadow: 3px 4px 9.4px 0px rgba(235, 235, 235, 0.31);
-  background-color: rgb(255, 255, 255, 1);
+  background-color: rgb(255, 255, 255, 0.7);
   display: flex;
   justify-content: center;
-  padding: 0.3rem;
+  /* border: 2px solid red; */
+  /* box-shadow: -7px -5px 17.8px 0px rgba(235, 235, 235, 1); */
+  border: 4px solid white;
+  box-shadow: 3px 4px 9.4px 0px rgba(235, 235, 235, 0.31), -7px -5px 17.8px 0px rgba(235, 235, 235, 1);
+  perspective: 1000px;
 
 
   .card-main {
     width: 100%;
-    border-radius: 15px;
+    border-radius: 10px;
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    background: linear-gradient(180deg, #FBA8C1 0%, rgba(251, 168, 193, 0.54) 46%, rgba(251, 168, 193, 0.97) 100%);
+    /* background: linear-gradient(180deg, #FBA8C1 0%, rgba(251, 168, 193, 0.54) 46%, rgba(251, 168, 193, 0.97) 100%); */
 
     .card-icon {
       /* border: 2px solid red; */
       /* height: 3rem;
       width: 2rem; */
       width: 4rem;
+      position: absolute;
     }
+  }
+
+  .card-main:hover {
+    cursor: pointer;
+    border: 1px solid white;
   }
 }

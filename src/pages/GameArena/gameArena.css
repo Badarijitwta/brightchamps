@@ -6,6 +6,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  margin-top: -4rem;
+
+  .game-arena-dialog {
+    width: 100%;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
 
   .game-arena-main {
     display: flex;
