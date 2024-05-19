@@ -5,6 +5,8 @@ import BlueHeart from "../../assets/blue_heart.png";
 import Dialog from "../../assets/dialog.png";
 import styled from "styled-components";
 import CurveLine from "../../assets/curvedtop.png";
+import Apple from "../../assets/apple.png";
+import Orange from "../../assets/Orange.png";
 const DialogImage = styled.img`
   height: 80px;
 `;
@@ -46,6 +48,7 @@ const Game: React.FC = () => {
                     "linear-gradient(180deg, #FBA8C1 0%, rgba(251, 168, 193, 0.54) 43%, rgba(251, 168, 193, 0.97) 100%)"
                   }
                   frontimageUrl={PinkHeart}
+                  backimageUrl={Apple}
                 />
               ))}
             </div>
@@ -57,6 +60,7 @@ const Game: React.FC = () => {
                     "linear-gradient(180deg, #FBA8C1 0%, rgba(251, 168, 193, 0.54) 46%, rgba(251, 168, 193, 0.97) 100%)"
                   }
                   frontimageUrl={PinkHeart}
+                  backimageUrl={Orange}
                 />
               ))}
             </div>
